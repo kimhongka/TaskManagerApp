@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TaskManagerApp;assembly=TaskManagerApp"
+             xmlns:customViews="clr-namespace:TaskManagerApp.CustomViews;assembly=TaskManagerApp"
+             x:Class="TaskManagerApp.HomePage"
+             
+             Title="Home Page">
+
+  <!--<MasterDetailPage.Master>
+      <local:MasterPage x:Name="masterPage" />
+  </MasterDetailPage.Master>-->
+
+      <ContentPage.BindingContext>
+        <local:HomePageViewModel Message="temp Message" />
+      </ContentPage.BindingContext>
+      <StackLayout>
+        <Label Text="Type Task List Title" />
+        <Entry x:Name="TaskTitle"
+             Placeholder="Task Title "
+             Text="{Binding TaskTitle}">
+        </Entry>
+        <Button
+          Text="My Tasks"
+          Command="{Binding NextToTaskListPageCommand}">
+        </Button>
+
+        <Label x:Name="Message" Text="{Binding Message}" />
+        <Button x:Name="GoNextBtn" Text="Go Next" Clicked="OnBtnGoToNextBtn"></Button>
+      </StackLayout>
+  
+    
+  
+</ContentPage>

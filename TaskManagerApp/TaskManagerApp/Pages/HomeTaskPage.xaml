@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TaskManagerApp;assembly=TaskManagerApp"
+             x:Class="TaskManagerApp.Pages.HomeTaskPage"
+             Title="HomeTask" >
+
+  <ListView x:Name="HomeTaskList" ItemSelected="homeTaskListItemSelected">
+  <ListView.ItemTemplate>
+    <DataTemplate>
+      <!--<TextCell Text="{Binding Id}" />-->
+      <TextCell Text="{Binding Title}" />
+    </DataTemplate>
+  </ListView.ItemTemplate>
+  </ListView>
+  
+  
+</ContentPage>
